@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dmitriyzo
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: Prefix
+            path: "/pet-project"
+            backend:
+              service:
+                name: pet-project
+                port:
+                  number: 80
